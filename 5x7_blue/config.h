@@ -42,4 +42,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 //split keyboard config
 #define USE_SERIAL
+
+#ifdef SOFT_SERIAL_PIN
+#undef SOFT_SERIAL_PIN
 #define SOFT_SERIAL_PIN D2
