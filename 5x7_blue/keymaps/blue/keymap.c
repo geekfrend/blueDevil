@@ -100,6 +100,16 @@ static void render_logo(void) {
 }
 
 #ifdef OLED_DRIVER_ENABLE
+
+oled_rotation_t oled_init_user(oled_rotation_t rotation) {
+    if (is_keyboard_master()) {
+        return OLED_ROTATION_180;  // flips the display 180 degrees if offhand
+    }
+
+    return rotation;
+}
+
+
 void oled_task_user(void) {
     if (is_keyboard_master()) {
         render_logo();  // Renders a static logo
@@ -110,13 +120,13 @@ void oled_task_user(void) {
 
     switch (get_highest_layer(layer_state)) {
         case _QWERTY:
-            oled_write_P(PSTR("Default\n"), false);
+            oled_write_P(PSTR("qwerty\n"), false);
             break;
         case _FN:
-            oled_write_P(PSTR("FN\n"), false);
+            oled_write_P(PSTR("function\n"), false);
             break;
         case _NUMPAD:
-            oled_write_P(PSTR("NUMPAD\n"), false);
+            oled_write_P(PSTR("numbers\n"), false);
             break;
         default:
             // Or use the write_ln shortcut over adding '\n' to the end of your string
