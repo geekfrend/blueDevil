@@ -62,7 +62,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                 _______,   _______,   _______,   KC_LEFT,   KC_DOWN,   KC_RIGHT,
                                            _______,   _______,
                                 _______, _______,
-   TOQWERTY, TONUM,
+   TOFN, TONUM,
    _______, _______
    ),
 
