@@ -10,12 +10,6 @@
 #define _FN     1
 #define _NUMPAD 2
 
-//layer macros
-#define TOQWERTY TG(_QWERTY)
-#define TOFN TG(_FN)
-#define TONUM TG(_NUMPAD)
-
-
 // Some basic macros
 #define TASK    LCTL(LSFT(KC_ESC))
 #define TAB_R   LCTL(KC_TAB)
@@ -120,7 +114,7 @@ void oled_task_user(void) {
 
     switch (get_highest_layer(layer_state)) {
         case _QWERTY:
-            oled_write_P(PSTR("qwerty\n"), false);
+            oled_write_P(PSTR("base qwerty\n"), false);
             break;
         case _FN:
             oled_write_P(PSTR("function\n"), false);
