@@ -41,7 +41,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                        KC_N,    KC_M,    KC_COMM,  KC_DOT,   KC_SLSH,  KC_DEL,
                                          KC_DEL,   KC_ENT,
                        KC_DOWN, KC_UP,
-    TOFN, TONUM,
+    TG(_FN), TG(_NUMPAD),
     KC_VOLD, KC_VOLU
     ),
 
@@ -62,7 +62,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                 _______,   _______,   _______,   KC_LEFT,   KC_DOWN,   KC_RIGHT,
                                            _______,   _______,
                                 _______, _______,
-   TOFN, TONUM,
+   TG(_FN), TG(_NUMPAD),
    _______, _______
    ),
 
@@ -83,7 +83,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                 _______,   KC_P1,     KC_P2,     KC_P3,     KC_PSLS,   _______,
                                            KC_P0,     KC_PDOT,
                                 _______, _______,
-    KC_NO, TONUM,
+    KC_NO, TG(_NUMPAD),
     _______, _______
     )
 
