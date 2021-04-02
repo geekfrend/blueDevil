@@ -12,8 +12,8 @@
 
 //layer macros
 #define TOQWERTY TG(_QWERTY)
-#define TOFN MO(_FN)
-#define TONUM MO(_NUMPAD)
+#define TOFN TG(_FN)
+#define TONUM TG(_NUMPAD)
 
 
 // Some basic macros
@@ -62,7 +62,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                 _______,   _______,   _______,   KC_LEFT,   KC_DOWN,   KC_RIGHT,
                                            _______,   _______,
                                 _______, _______,
-   _______, _______,
+   TOFN, TONUM,
    _______, _______
    ),
 
@@ -83,7 +83,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                 _______,   KC_P1,     KC_P2,     KC_P3,     KC_PSLS,   _______,
                                            KC_P0,     KC_PDOT,
                                 _______, _______,
-    _______, _______,
+    KC_NO, TONUM,
     _______, _______
     )
 
