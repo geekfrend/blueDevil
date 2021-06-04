@@ -24,6 +24,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define DEVICE_VER      0x0001
 #define PRODUCT         Dactyl-Manuform (5x7)
 
+//this is in conjunction with EXTRAFLAGS += -flto in rules.mk
+//https://thomasbaart.nl/2018/12/01/reducing-firmware-size-in-qmk/
+#define NO_ACTION_MACRO
+#define NO_ACTION_FUNCTION
+
 /* key matrix size */
 // Rows are doubled-up
 #define MATRIX_ROWS 10
